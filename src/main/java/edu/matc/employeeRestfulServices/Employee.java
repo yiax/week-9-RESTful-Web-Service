@@ -25,12 +25,12 @@ public class Employee {
         List<User> users = userDao.getAllUsers();
         List<Role> roles = roleDao.getAllRole();
 
-            for (int i = 0; i < users.size(); i++) {
-                output += "Employee ID: " + users.get(i).getId() + "<br/>" +
-                        "First Name:  " + users.get(i).getFirstName() + "<br/>" +
-                        "Last Name:   " + users.get(i).getLastName() + "<br/>" +
-                        "Role:        " + roles.get(i).getRole() + "<br/><br/>";
-            }
+        for (int i = 0; i < users.size(); i++) {
+            output += "Employee ID: " + users.get(i).getId() + "<br/>" +
+                    "First Name:  " + users.get(i).getFirstName() + "<br/>" +
+                    "Last Name:   " + users.get(i).getLastName() + "<br/>" +
+                    "Role:        " + roles.get(i).getRole() + "<br/><br/>";
+        }
 
         return Response.status(200).entity(output).build();
     }
